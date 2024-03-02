@@ -1,5 +1,3 @@
-### Still a WIP
-
 ### What Is This?
 Terraform (Infrastructure-as-Code) and Bash automation to build a cloud instance with [evilnginx2](https://github.com/kgretzky/evilginx2) installed.
 
@@ -9,6 +7,9 @@ The Bash automation will:
 - Install an example phishlet
 
 By default, Debian 11 is used as the instance OS. This can be modified by passing a `ami_id` variable to the respective Terraform dir for your chosen cloud provider.
+
+## Disclaimer
+Don't use this for anything illegal. This project is only for educational and legal security purposes.
 
 ### How Do I Use It? (ALL CLOUDS)
 
