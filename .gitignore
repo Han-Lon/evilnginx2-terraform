@@ -1,0 +1,5 @@
+# Ignore Terraform-related build files that shouldn't be part of version control
+*.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/
