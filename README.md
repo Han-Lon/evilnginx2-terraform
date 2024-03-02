@@ -31,14 +31,14 @@ After generating the SSH key and understanding the DNS prerequisite, it's time t
     - You already have an AWS account
     - You have AWS credentials/profile set locally in your terminal already
 
-- Necessary variables
+- Necessary Variables
     - When executing your terraform commands below, you will be prompted to set some required variables, such as:
         - `public_ssh_key`
     - You can persist these variables so they don't have to be entered manually every time by creating a `terraform.tfvars` file within the `aws/` dir, and putting the value for `public_ssh_key = "PUBLIC_SSH_KEY"` within
     - There are many other variables that can be optionally defined for various purposes. Check `aws/variables.tf` for more info. This is considered an advanced use case, and is out of scope for this general quickstart guide.
         - A quick example: if you want to limit SSH connections to a specific IP address, you can specify `allowed_ssh_ip = "x.x.x.x/32"`
 
-- Steps
+- Deployment Steps
     - `cd` into the `aws/` folder within this repo
     - Run `terraform init`
         - This will generate what's called a state file within the `aws/` folder. This state file is very important, as it's how Terraform tracks the current state of deployed infrastructure.
@@ -52,4 +52,6 @@ After generating the SSH key and understanding the DNS prerequisite, it's time t
         - You can track the current progress of the bootstrap scripts by SSHing into the instance and running `tail -f /var/log/cloud-init-output.log`
         - I recommend reloading your current session, either through `source /etc/profile` or logging out then in again via SSH, after the script has completed. There are some necessary PATH modifications that are persisted in `/etc/profile` that won't get picked up if you don't reload your session.
     - Whenever you want, you can SSH into your instance with `ssh -i PATH_TO_PRIVATE_SSH_KEY admin@INSTANCE_PUBLIC_IP`
-    
+
+
+#### Deploy to Vultr
