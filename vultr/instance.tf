@@ -42,3 +42,7 @@ resource "vultr_instance" "evilnginx2-server" {
   ssh_key_ids = [vultr_ssh_key.ssh-key.id]
   firewall_group_id = vultr_firewall_group.evilnginx2-firewall.id
 }
+
+output "instance-public-ip" {
+    value = vultr_instance.evilnginx2-server.main_ip
+}
