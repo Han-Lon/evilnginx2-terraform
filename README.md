@@ -1,4 +1,4 @@
-### What Is This?
+## What Is This?
 Terraform (Infrastructure-as-Code) and Bash automation to build a cloud instance with [evilnginx2](https://github.com/kgretzky/evilginx2) installed.
 
 The Bash automation will:
@@ -11,7 +11,7 @@ By default, Debian 11 is used as the instance OS. This can be modified by passin
 ## Disclaimer
 Don't use this for anything illegal. This project is only for educational and legal security purposes.
 
-### How Do I Use It? (ALL CLOUDS)
+## How Do I Use It? (ALL CLOUDS)
 
 No matter which cloud provider you use, you will need an SSH key pair, which will be used to connect to the instance after deployment.
 
@@ -26,7 +26,7 @@ You will also, obviously, [need Terraform installed](https://developer.hashicorp
 
 After generating the SSH key and understanding the DNS prerequisite, it's time to choose your cloud provider...
 
-#### Deploy to AWS
+### Deploy to AWS
 
 - Prerequisites
     - You already have an AWS account
@@ -55,7 +55,7 @@ After generating the SSH key and understanding the DNS prerequisite, it's time t
     - Whenever you want, you can SSH into your instance with `ssh -i PATH_TO_PRIVATE_SSH_KEY admin@INSTANCE_PUBLIC_IP`
 
 
-#### Deploy to Vultr
+### Deploy to Vultr
 
 - Prerequisites
     - You already have a Vultr account
